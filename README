@@ -1,0 +1,5 @@
+This is a GEdit plugin to show the current branch in git.
+
+To install just copy all files to the directory ~/.gnome2/gedit/plugins
+
+To view, open the file and press CTRL+ALT+B or use the command "Git Branch" from the tools menu.

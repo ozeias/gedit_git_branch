@@ -1,0 +1,8 @@
+[Gedit Plugin]
+Loader=python
+Module=git_branch
+IAge=2
+Name=Git Branch
+Description=Current Git Branch
+Authors=Ozéias Sant'ana <oz.santana@gmail.com>
+Website=http://iconcreative.net/
