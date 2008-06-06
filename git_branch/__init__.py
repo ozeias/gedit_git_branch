@@ -108,6 +108,8 @@ class GitBranchWindowHelper:
 
     def update_ui(self):
         self._action_group.set_sensitive(self._window.get_active_document() != None)
+	if self._window.get_active_document() != None:
+		self.on_git_branch_activate("")
     
     def _set_status(self, text=None):
         self._statusbar.pop(self._context_id)
@@ -139,8 +141,7 @@ class GitBranchWindowHelper:
     def on_git_branch_activate(self, action):
         label=None
         base_dir = os.path.dirname(self._window.get_active_document().get_uri_for_display())
-        out=commands.getoutput('cd ' + base_dir + '\ngit branch')
-
+        out=commands.getoutput('cd "' + base_dir + '" && git branch')
         for el in out.split('\n'):
             if  el[0] == '*':
                 label = el
